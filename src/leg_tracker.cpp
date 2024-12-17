@@ -382,9 +382,10 @@ visualization_msgs::Marker LegDetector::getArrowMarker(double start_x, double st
     end.x = end_x;
     end.y = end_y;
     end.z = z_coordinate / 2;
-    marker.pose.position.x = 0.;
-    marker.pose.position.y = 0.;
-    marker.pose.position.z = 0.1;
+//     marker.pose.position.x = 0.;
+//     marker.pose.position.y = 0.;
+//     marker.pose.position.z = 0.1;
+    marker.pose.orientation.w = 1;
     marker.points.push_back(start);
     marker.points.push_back(end);
     marker.scale.x = 0.05;
@@ -1431,6 +1432,7 @@ void LegDetector::pub_bounding_box(double min_x, double min_y, double max_x, dou
     marker.pose.position.x = (max_x + min_x) / 2;
     marker.pose.position.y = (max_y + min_y) / 2;
     marker.pose.position.z = z_coordinate;
+    marker.pose.orientation.w = 1;
     marker.scale.x = max_x - min_x;
     marker.scale.y = max_y - min_y;
     marker.scale.z = 0.01;
@@ -1450,6 +1452,7 @@ void LegDetector::pub_border(double min_x, double min_y, double max_x, double ma
     marker.pose.position.x = (max_x + min_x) / 2;
     marker.pose.position.y = (max_y + min_y) / 2;
     marker.pose.position.z = z_coordinate;
+    marker.pose.orientation.w = 1;
     marker.scale.x = max_x - min_x;
     marker.scale.y = max_y - min_y;
     marker.scale.z = 0.01;
@@ -1879,6 +1882,7 @@ void LegDetector::pub_border_square()
           marker.scale.x = x_upper_limit - x_lower_limit;
           marker.scale.y = y_upper_limit - y_lower_limit;
         }
+    marker.pose.orientation.w = 1;
     marker.scale.z = 0.01;
     marker.color.a = 1.0;
     marker.color.g = 1.0;
@@ -1917,6 +1921,7 @@ void LegDetector::vis_tracking_zones()
         marker.pose.position.x = (tracking_zones[i].getXUpperLimit() + tracking_zones[i].getXLowerLimit()) / 2;
         marker.pose.position.y = (tracking_zones[i].getYUpperLimit() + tracking_zones[i].getYLowerLimit()) / 2;
         marker.pose.position.z = 0.0;
+        marker.pose.orientation.w = 1;
         marker.scale.x = tracking_zones[i].getXUpperLimit() - tracking_zones[i].getXLowerLimit();
         marker.scale.y = tracking_zones[i].getYUpperLimit() - tracking_zones[i].getYLowerLimit();
         marker.scale.z = 0.01;

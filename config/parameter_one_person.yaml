@@ -5,11 +5,11 @@ isBoundingBoxTracking: false
 with_map: false
 
 # average point where the user stands
-ref_point_x: -0.9
+ref_point_x: -0.5
 ref_point_y: 0.0
 
 # zone 1
-x_lower_limit: -1.7
+x_lower_limit: -1.8
 x_upper_limit: -0.3
 y_lower_limit: -0.7
 y_upper_limit: 0.7
