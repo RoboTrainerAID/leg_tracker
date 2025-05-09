@@ -1,5 +1,6 @@
 #scan_topic: /base_laser_rear/scan
-scan_topic: /scan_unified
+scan_topic: /base_laser_back/scan
+# scan_topic: /scan_unified
 #scan_topic: /sick_s300/scan_in
 #scan_topic: /scan_rear_raw
 
@@ -15,7 +16,7 @@ leg_radius: 0.1
 min_observations: 3
 min_predictions: 3
 max_dist_btw_legs: 0.8
-z_coordinate: 0.0
+z_coordinate: 0.3789
 #vel_stance_threshold: 0.47
 #vel_swing_threshold: 0.93
 #state_dimensions: 6

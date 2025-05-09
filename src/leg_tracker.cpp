@@ -28,7 +28,7 @@ void LegDetector::init()
     nh_.param("ref_point_y", ref_point_y, 0.0);
     nh_.param("min_observations", min_observations, 4);
     nh_.param("max_dist_btw_legs", max_dist_btw_legs, 0.8);
-    nh_.param("z_coordinate", z_coordinate, 0.178);
+    nh_.param("z_coordinate", z_coordinate, 0.3789);
     nh_.param("vel_stance_threshold", vel_stance_threshold, 0.47);
     nh_.param("vel_swing_threshold", vel_swing_threshold, 0.93);
     nh_.param("state_dimensions", state_dimensions, 6);
